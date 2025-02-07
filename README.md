@@ -12,8 +12,6 @@ A Django-based chatbot application that allows users to query information about 
 
 - Django
 - NLTK (Natural Language Toolkit)
-- LangGraph
-- Hugging Face Transformers
 - SQLite (default database)
 
 ## Installation
