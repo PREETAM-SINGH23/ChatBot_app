@@ -4,7 +4,6 @@ import nltk
 from django.shortcuts import render
 from .models import Product
 
-# Ensure the punkt resource is downloaded
 try:
     nltk.data.find('tokenizers/punkt')
     import nltk
