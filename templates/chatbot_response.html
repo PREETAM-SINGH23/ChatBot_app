@@ -1,0 +1,22 @@
+<!-- templates/chatbot_response.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="chat-box" id="chat-box">
+        {% if response %}
+            <div class="chat-message">
+                <strong>Chatbot:</strong>
+                <p>{{ response }}</p>
+            </div>
+        {% else %}
+            <div class="chat-message">
+                <strong>Chatbot:</strong>
+                <p>I'm here to help! Ask me about products or suppliers.</p>
+            </div>
+        {% endif %}
+    </div>
+    <form method="get" action="{% url 'chatbot_response' %}" class="user-input">
+        <input type="text" name="user_input" class="form-control" placeholder="Type your query here..." required>
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+{% endblock %}
